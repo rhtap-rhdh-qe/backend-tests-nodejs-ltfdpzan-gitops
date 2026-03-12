@@ -1,0 +1,12 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+commonLabels:         
+  tssc/gitops: backend-tests-nodejs-ltfdpzan 
+  janus-idp.io/tekton: backend-tests-nodejs-ltfdpzan
+  backstage.io/kubernetes-id: backend-tests-nodejs-ltfdpzan
+  backstage.io/kubernetes-namespace: tssc-app 
+  app.kubernetes.io/part-of: backend-tests-nodejs-ltfdpzan
+resources:
+  - application-dev.yaml
+  - application-stage.yaml
+  - application-prod.yaml
